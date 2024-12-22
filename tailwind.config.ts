@@ -20,6 +20,7 @@ export default {
       colors: {
 
         "primary-bg": "#202f29",
+        "secondary-bg": "#0f4a37",
         "primary-fg": "#9fa6a0",
         "primary-hl": "#c47171",
         foreground: "var(--foreground)",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Inter, Lato } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 const lato = Poppins({
   display: "swap",
-  weight: ["300", "400", "700", "900"],
+  weight: ["300", "400", "700"],
   subsets: ['latin'],
   fallback: ["sans"],
   variable: "--font-main"

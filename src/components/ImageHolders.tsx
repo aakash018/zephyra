@@ -6,10 +6,12 @@ import { useRef } from "react"
 interface Props {
 	rootClassName?: string,
 	imageClassName?: string,
-	imageLoc: string
+	imageLoc: string,
+	width?: number,
+	height?: number
 }
 
-export const ImageHolder = ({ rootClassName, imageClassName, imageLoc }: Props) => {
+export const ImageHolder = ({ rootClassName, imageClassName, imageLoc, width, height }: Props) => {
 
 	const divRef = useRef<HTMLDivElement>(null)
 	const { scrollYProgress } = useScroll({
@@ -17,7 +19,7 @@ export const ImageHolder = ({ rootClassName, imageClassName, imageLoc }: Props) 
 		offset: ["start end", "end start"]
 	})
 
-	const transformY = useTransform(scrollYProgress, [0, 1], ["-40%", "40%"])
+	const transformY = useTransform(scrollYProgress, [0, 1], ["-25%", "25%"])
 
 	return (
 		<div className={`overflow-hidden ${rootClassName}`} ref={divRef}>
@@ -27,7 +29,7 @@ export const ImageHolder = ({ rootClassName, imageClassName, imageLoc }: Props) 
 				}}
 
 				className="w-full h-full">
-				<Image src={imageLoc} className={`${imageClassName} scale-[1.2] object-cover w-full h-full`} width={1000} height={800} alt="resort-1" />
+				<Image src={imageLoc} className={`${imageClassName} scale-[1.2] object-cover w-full h-full`} width={width ? width : 1000} height={height ?? 800} alt="resort-1" />
 			</motion.div>
 		</div>
 	)

@@ -1,9 +1,8 @@
 "use client"
 import { motion, useScroll, useTransform } from "motion/react"
-import { useRef } from "react";
 
 const generateGradient = (progress: number) => {
-	let gradientStops = [];
+	const gradientStops = [];
 	const baseStep = 3.33; // Base width of each stripe
 
 	for (let i = 0; i < 30; i++) { // Generate 30 stops
@@ -56,6 +55,6 @@ export const BliendersLayer = ({ containerTargretRef, className }: Props) => {
 				maskImage: gradient,
 				opacity: gradient_opacity
 			}
-		} >Hello World</motion.div>
+		} ></motion.div>
 	)
 }

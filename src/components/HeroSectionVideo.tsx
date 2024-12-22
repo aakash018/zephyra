@@ -12,7 +12,7 @@ export const HeroSection = () => {
 				<Navbar />
 				<HeroBottomSection />
 			</div>
-			<div className="absolute w-full h-full bg-[#00000080] " ></div>
+			<div className="absolute w-full h-full bg-[#00000070] " ></div>
 			<BliendersLayer containerTargretRef={videoRef} />
 			<video className="w-full h-full object-cover" autoPlay muted loop>
 				<source src="/beach4.mp4" type="video/mp4" className="object-cover" />
